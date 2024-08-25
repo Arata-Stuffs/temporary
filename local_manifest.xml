@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="skyy"
+          fetch="https://github.com/Arata-Stuffs/"
+          sync-c="true"
+          sync-j="4" />
+
+  <!-- Local -->
+  <project path="kernel/xiaomi/surya" name="temporary" remote="skyy" revision="new" />
+  <project path="device/xiaomi/surya" name="android_device_xiaomi_surya" remote="skyy" revision="rising-14" />
+  <project path="vendor/xiaomi/surya" name="android_vendor_xiaomi_surya" remote="skyy" revision="qpr3" />
+
+</manifest>
