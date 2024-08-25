@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/org.lineageos.settings"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/about_xiaomiparts" >
+
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="header_about_illustration"
+        app:lottie_rawRes="@raw/header_about_illustration" />
+
+    <Preference
+        android:key="xiaomi_parts_about_summary"
+        android:summary="@string/about_summary"
+        android:selectable="false" />
+
+    <PreferenceCategory
+         android:key="xiaomi_parts_source"
+         android:title="@string/profile">
+
+        <!-- Source -->
+        <Preference
+            android:title="@string/github"
+            android:summary="@string/github_profile"
+            settings:layout="@layout/arc_card_about_top"
+            android:icon="@drawable/ic_source">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/HinohArata" />
+        </Preference>
+
+	<Preference
+            android:title="@string/telegram_group"
+            android:summary="@string/telegram_group_summary"
+            settings:layout="@layout/arc_card_about_bottom"
+            android:icon="@drawable/ic_devs">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/ArataStuffs" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="about_donate"
+        android:title="@string/donate">
+
+        <!-- Donate -->
+        <Preference
+            android:title="@string/donate_us"
+            android:summary="@string/donate_summary"           
+            settings:layout="@layout/arc_card_about_single"
+            android:icon="@drawable/ic_donate">
+        <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://saweria.co/HinohArata" />
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
